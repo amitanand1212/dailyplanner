@@ -18,7 +18,6 @@
     },
     "android": {
       "package": "com.dailyplanner.app",
-      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#F4F5FA"
@@ -37,7 +36,8 @@
         {
           "color": "#6C5CE7"
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
