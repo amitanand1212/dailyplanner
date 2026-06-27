@@ -1,9 +1,11 @@
 import "../global.css";
+import { useEffect } from "react";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import NotificationBanner from "@/components/ui/NotificationBanner";
 import { useNotifications } from "@/hooks/useNotifications";
+import { initializeAds } from "@/utils/ads";
 
 export const unstable_settings = {
   initialRouteName: "index",
@@ -11,6 +13,10 @@ export const unstable_settings = {
 
 export default function RootLayout() {
   useNotifications();
+
+  useEffect(() => {
+    initializeAds();
+  }, []);
 
   return (
     <SafeAreaProvider>

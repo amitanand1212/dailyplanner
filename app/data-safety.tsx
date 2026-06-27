@@ -42,22 +42,23 @@ export default function DataSafetyScreen() {
   return (
     <LegalLayout title="Data Safety" updated="June 22, 2026">
       <P>
-        Here's a clear summary of how Daily Planner handles your data. In short:
-        everything stays on your device.
+        Here's a clear summary of how Daily Planner handles your data. Your
+        tasks stay on your device; the only data that leaves the app is what
+        Google AdMob needs to show ads.
       </P>
 
       <InfoCard
         bg="#DCFCE7"
         icon={<Ionicons name="lock-closed" size={20} color="#22C55E" />}
-        title="No data is collected by us"
-        body="The app has no server. Your tasks, profile and settings are saved only on your device and are never sent to us."
+        title="Your tasks stay on your device"
+        body="The app has no server of its own. Your tasks, profile and settings are saved only on your device and are never sent to us."
       />
 
       <InfoCard
         bg="#DBEAFE"
-        icon={<Ionicons name="share-social" size={20} color="#3B82F6" />}
-        title="No data is shared"
-        body="We do not share or sell any of your information to third parties."
+        icon={<Ionicons name="megaphone" size={20} color="#3B82F6" />}
+        title="Ads use Google AdMob"
+        body="To show ads, Google AdMob may collect your device's advertising ID and basic device info. This is the only data that leaves the app, and Google handles it."
       />
 
       <InfoCard

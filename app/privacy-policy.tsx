@@ -43,10 +43,25 @@ export default function PrivacyPolicyScreen() {
         </P>
       </Section>
 
+      <Section heading="Advertising">
+        <P>
+          The app displays ads through Google AdMob. To serve ads, Google may
+          collect and process limited data such as your device's advertising
+          ID, IP address, and general device information, and may use it to
+          provide and personalize ads.
+        </P>
+        <P>
+          You can read how Google uses this data at
+          policies.google.com/technologies/partner-sites, and you can reset or
+          limit your advertising ID from your device settings.
+        </P>
+      </Section>
+
       <Section heading="Data sharing">
         <P>
-          We do not sell, rent, or share your personal data with third parties.
-          Because your data lives on your device, it is never transmitted to us.
+          We do not sell or rent your personal data. Apart from the advertising
+          data handled by Google AdMob (see Advertising above), your data stays
+          on your device and is not transmitted to us.
         </P>
       </Section>
 

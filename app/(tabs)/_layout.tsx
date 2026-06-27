@@ -1,14 +1,23 @@
 import { View } from "react-native";
-import { Tabs, useRouter } from "expo-router";
+import { Tabs, useRouter, usePathname } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Fab from "@/components/ui/Fab";
+import AdBanner from "@/components/ui/AdBanner";
+import { BANNER_HEIGHT, isExpoGo } from "@/utils/ads";
 
 const TAB_BAR_HEIGHT = 58;
 
 export default function TabsLayout() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const pathname = usePathname();
+
+  // Banner sits above the tab bar on Home only; lift the FAB clear of it so
+  // nothing overlaps the ad (AdMob forbids tap targets over ads).
+  const showBanner = pathname === "/home" && !isExpoGo;
+  const fabBottom =
+    insets.bottom + TAB_BAR_HEIGHT + 16 + (showBanner ? BANNER_HEIGHT : 0);
 
   return (
     <View className="flex-1 bg-bg">
@@ -78,10 +87,9 @@ export default function TabsLayout() {
         />
       </Tabs>
 
-      <Fab
-        bottom={insets.bottom + TAB_BAR_HEIGHT + 16}
-        onPress={() => router.push("/add-task")}
-      />
+      {showBanner ? <AdBanner bottom={insets.bottom + TAB_BAR_HEIGHT} /> : null}
+
+      <Fab bottom={fabBottom} onPress={() => router.push("/add-task")} />
     </View>
   );
 }

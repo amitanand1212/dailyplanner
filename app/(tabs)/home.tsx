@@ -3,6 +3,7 @@ import { ScrollView, Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTaskStore } from "@/store/useTaskStore";
+import { BANNER_HEIGHT } from "@/utils/ads";
 import { todayISO } from "@/utils/date";
 import { taskOccursOn } from "@/utils/recurrence";
 import Header from "@/components/home/Header";
@@ -37,7 +38,8 @@ export default function HomeScreen() {
         contentContainerStyle={{
           paddingTop: insets.top + 12,
           paddingHorizontal: 20,
-          paddingBottom: insets.bottom + 110,
+          // extra space so the last task clears the tab bar + anchored ad banner
+          paddingBottom: insets.bottom + 110 + BANNER_HEIGHT,
         }}
       >
         <Header />
