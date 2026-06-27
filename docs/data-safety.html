@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Safety — Daily Planner</title>
+  <style>
+    :root { --primary: #6C5CE7; --ink: #1A1D2E; --muted: #5b6070; --bg: #F4F5FA; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+    header { border-bottom: 3px solid var(--primary); padding-bottom: 16px; margin-bottom: 8px; }
+    h1 { margin: 0 0 4px; font-size: 28px; }
+    .updated { color: var(--muted); font-size: 14px; }
+    p { color: var(--muted); font-size: 16px; }
+    a { color: var(--primary); }
+    .lead { margin: 20px 0 8px; }
+    .item { background: #fff; border-radius: 16px; padding: 16px 20px; margin-top: 14px;
+            box-shadow: 0 4px 16px rgba(26,29,46,0.06); }
+    .item h3 { margin: 0 0 4px; font-size: 16px; color: var(--ink); }
+    .item p { margin: 0; font-size: 15px; }
+    .note { margin-top: 18px; background: #EDEBFB; color: #4b40b8; border-radius: 14px;
+            padding: 14px 18px; font-size: 14px; }
+    footer { margin-top: 28px; color: var(--muted); font-size: 13px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Data Safety</h1>
+      <div class="updated">Daily Planner &middot; Last updated: June 22, 2026</div>
+    </header>
+
+    <p class="lead">
+      Here's a clear summary of how Daily Planner handles your data. Your tasks stay
+      on your device; the only data that leaves the app is what Google AdMob needs
+      to show ads.
+    </p>
+
+    <div class="item">
+      <h3>🔒 Your tasks stay on your device</h3>
+      <p>The app has no server of its own. Your tasks, profile and settings are saved
+        only on your device and are never sent to us.</p>
+    </div>
+
+    <div class="item">
+      <h3>📣 Ads use Google AdMob</h3>
+      <p>To show ads, Google AdMob may collect your device's advertising ID and basic
+        device info. This is the only data that leaves the app, and Google handles it.</p>
+    </div>
+
+    <div class="item">
+      <h3>🔔 Notifications stay on-device</h3>
+      <p>Reminders are scheduled locally on your phone. They are not processed on any
+        server.</p>
+    </div>
+
+    <div class="item">
+      <h3>🗑️ You control your data</h3>
+      <p>Delete everything anytime with Reset Data in Profile, or by uninstalling the
+        app.</p>
+    </div>
+
+    <div class="note">
+      This summary matches the official Data Safety details shown on our Google Play
+      listing. Full details are in our
+      <a href="privacy-policy.html">Privacy Policy</a>.
+    </div>
+
+    <footer>&copy; 2026 Daily Planner. All rights reserved.</footer>
+  </div>
+</body>
+</html>
