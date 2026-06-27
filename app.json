@@ -17,7 +17,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.dailyplanner.app",
+      "package": "com.lushapp.dailyplanner",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#F4F5FA"

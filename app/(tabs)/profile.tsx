@@ -69,14 +69,6 @@ interface MenuItem {
 /** Static visuals for the menu; onPress is wired up in the component. */
 const MENU_VISUALS: Omit<MenuItem, "onPress">[] = [
   {
-    title: "Upgrade to Premium", subtitle: "Unlock all premium features", bg: "#EDEBFB",
-    icon: <MaterialCommunityIcons name="crown" size={20} color="#6C5CE7" />,
-  },
-  {
-    title: "Reminder Settings", subtitle: "Manage notifications and sounds", bg: "#DCFCE7",
-    icon: <Ionicons name="notifications" size={20} color="#22C55E" />,
-  },
-  {
     title: "Help & Support", subtitle: "FAQs, contact us, and more", bg: "#EDEBFB",
     icon: <Ionicons name="help-circle" size={20} color="#6C5CE7" />,
   },
@@ -218,26 +210,14 @@ export default function ProfileScreen() {
         }}
       >
         {/* header */}
-        <View className="flex-row items-center justify-between">
+        <View className="flex-row items-center">
           <Text className="text-3xl font-extrabold text-ink">Profile</Text>
-          <TouchableOpacity
-            activeOpacity={0.7}
-            className="h-11 w-11 items-center justify-center rounded-2xl bg-white"
-            style={SHADOW}
-          >
-            <Feather name="settings" size={20} color="#1A1D2E" />
-          </TouchableOpacity>
         </View>
 
         {/* profile card */}
         <View className="mt-5 flex-row items-center rounded-3xl bg-primary-light p-4">
-          <View>
-            <View className="h-16 w-16 items-center justify-center rounded-full bg-primary">
-              <Ionicons name="person" size={32} color="#fff" />
-            </View>
-            <View className="absolute -bottom-1 -right-1 h-6 w-6 items-center justify-center rounded-full border-2 border-primary-light bg-white">
-              <Feather name="camera" size={11} color="#1A1D2E" />
-            </View>
+          <View className="h-16 w-16 items-center justify-center rounded-full bg-primary">
+            <Ionicons name="person" size={32} color="#fff" />
           </View>
           <View className="ml-4 flex-1">
             <Text className="text-xl font-extrabold text-ink">{name} 👋</Text>
@@ -247,16 +227,11 @@ export default function ProfileScreen() {
               <Text className="ml-1 text-xs font-semibold text-primary">{plan}</Text>
             </View>
           </View>
-          <Feather name="chevron-right" size={22} color="#6C5CE7" />
         </View>
 
         {/* overview */}
         <View className="mt-6 flex-row items-center justify-between">
           <Text className="text-lg font-bold text-ink">Your Overview</Text>
-          <View className="flex-row items-center rounded-full border border-primary/30 px-3 py-1.5">
-            <Text className="mr-1 text-sm font-semibold text-primary">This Week</Text>
-            <Feather name="chevron-down" size={14} color="#6C5CE7" />
-          </View>
         </View>
 
         <View className="mt-3 flex-row rounded-3xl bg-white p-5" style={SHADOW}>
